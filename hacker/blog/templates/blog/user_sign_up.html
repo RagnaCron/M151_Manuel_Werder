@@ -1,0 +1,20 @@
+{% extends 'blog/blog_base.html' %}
+{% block title %}Hacker Sign Up{% endblock %}
+{% block content %}
+    <a class="exit" href="{% url 'blog:welcome_hacker' %}"><strong>Quit</strong></a>
+    <section class="basic_layout">
+        <div class="inner_layout">
+            <h1>Register new User</h1>
+            <form class="inner_input" method="post" action="{% url 'blog:user_sign_up' %}">
+                {% csrf_token %}
+                {% for form in user_sign_up_form %}
+                    {{ form.errors }}
+                    {{ form.label }}<br>
+                    {{ form }}<br>
+                {% endfor %}
+                <br>
+                <input class="button" type="submit" value="Register">
+            </form>
+        </div>
+    </section>
+{% endblock %}

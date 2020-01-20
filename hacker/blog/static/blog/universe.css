@@ -47,6 +47,7 @@ nav {
 
 .center_layout {
     text-align: center;
+    align-items: center;
 }
 
 .box {
@@ -62,6 +63,15 @@ nav {
 .box_link {
     text-decoration: none;
     color: #B8C0CF;
+}
+
+.button_link {
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px #B8C0CF;
+    color: #233446;
+    align-self: center;
+    text-align: center;
 }
 
 .inner_layout {

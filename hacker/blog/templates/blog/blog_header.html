@@ -2,11 +2,11 @@
     <section class="basic_layout">
         <div class="box">
             {% if user.is_authenticated %}
-{#                <div class="box_link">{{ user.username }}</div>#}
-{#                <a class="box_link" href="{% url 'cronjob:userLogout' %}">Logout</a>#}
+                <div class="box_link">{{ user.username }}</div>
+                <a class="box_link" href="{% url 'blog:user_logout' %}">Logout</a>
             {% else %}
                 <a class="box_link" href="{% url 'blog:user_login' %}">Login</a>
-                <a class="box_link" href="{% url 'blog:user_sign_in' %}">Sign in</a>
+                <a class="box_link" href="{% url 'blog:user_sign_up' %}">Sign Up</a>
             {% endif %}
         </div>
     </section>

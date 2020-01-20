@@ -1,7 +1,6 @@
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import authenticate, login
 from django.shortcuts import render
-
-from hacker.blog.forms.blog.blog_login_form import BlogLoginForm
+from blog.forms.blog.blog_login_form import BlogLoginForm
 
 
 def user_login(request):
@@ -20,5 +19,5 @@ def user_login(request):
 	else:
 		user_login_form = BlogLoginForm()
 		error = user_login_form.errors
-	context = {'user_login_form': user_login_form, 'error': error, }
+	context = {'user_login_form': user_login_form, 'error': error}
 	return render(request, 'blog/user_login.html', context=context)
