@@ -1,5 +1,23 @@
 {% extends 'blog/blog_base.html' %}
 {% block title %}Welcome Hacker{% endblock %}
 {% block content %}
-	<p>Hello, world!</p>
+    {% include 'blog/blog_header.html' %}
+    <section class="basic_layout">
+        <div class="center_layout">
+            {% if user.is_authenticated %}
+                {% ifnotequal message '' %}
+                    <p>{{ message }}</p>
+                {% endifnotequal %}<br><br>
+                <a class="box_link" href="{% url '#' %}">Create new Blog</a>
+                <a class="box_link" href="{% url '#' %}">Edit Blog</a>
+            {% else %}
+                {% ifequal message '' %}
+                    <h1>Hello, Hacker! =)</h1>
+                    <p>You have to login to write your own blog or read blog posts form other users.</p>
+                {% else %}
+                    {{ message }}
+                {% endifequal %}
+            {% endif %}
+        </div>
+    </section>
 {% endblock %}

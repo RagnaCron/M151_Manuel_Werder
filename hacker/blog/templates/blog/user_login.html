@@ -1,0 +1,20 @@
+{% extends 'blog/blog_base.html' %}
+{% block title %}Hacker Login{% endblock %}
+{% block content %}
+	<a class="exit" href="{% url 'blog:welcome_hacker' %}" xmlns="http://www.w3.org/1999/html"><strong>Quit</strong></a>
+	<section class="basic_layout">
+		<div class="inner_layout">
+			<p>{{ error }}</p>
+			<h1>Cron Login</h1>
+			<form class="inner_input" method="post" action="{% url 'blog:user_login' %}">
+                {% csrf_token %}
+                {% for login in user_login_form %}
+                    {{ login.label }}<br>
+                    {{ login }}<br>
+                {% endfor %}
+				<br>
+				<input class="button" type="submit" value="Login">
+			</form>
+		</div>
+	</section>
+{% endblock %}

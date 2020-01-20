@@ -45,6 +45,10 @@ nav {
     color: #233446;
 }
 
+.center_layout {
+    text-align: center;
+}
+
 .box {
     margin: 0;
     padding-right: 30pt;
@@ -91,6 +95,3 @@ nav {
     margin-right: 20pt;
     align-self: flex-end;
 }
-
-
-
