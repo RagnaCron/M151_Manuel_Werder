@@ -5,7 +5,7 @@ from django.shortcuts import render
 from blog.forms.blog.user_sign_up_form import MyUserCreationForm
 
 
-def user_sign_up(request):
+def user_sign_up_view(request):
 	if request.method == 'POST':
 		user_sign_up_form = MyUserCreationForm(request.POST)
 		if user_sign_up_form.is_valid():

@@ -3,10 +3,10 @@
         <div class="box">
             {% if user.is_authenticated %}
                 <div class="box_link">{{ user.username }}</div>
-                <a class="box_link" href="{% url 'blog:user_logout' %}">Logout</a>
+                <a class="box_link" href="{% url 'blog:user_logout_view' %}">Logout</a>
             {% else %}
-                <a class="box_link" href="{% url 'blog:user_login' %}">Login</a>
-                <a class="box_link" href="{% url 'blog:user_sign_up' %}">Sign Up</a>
+                <a class="box_link" href="{% url 'blog:user_login_view' %}">Login</a>
+                <a class="box_link" href="{% url 'blog:user_sign_up_view' %}">Sign Up</a>
             {% endif %}
         </div>
     </section>

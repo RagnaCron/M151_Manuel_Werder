@@ -3,7 +3,7 @@ from django.shortcuts import render
 from blog.forms.blog.blog_login_form import BlogLoginForm
 
 
-def user_login(request):
+def user_login_view(request):
 	if request.method == 'POST':
 		user_login_form = BlogLoginForm(request.POST)
 		if user_login_form.is_valid():
