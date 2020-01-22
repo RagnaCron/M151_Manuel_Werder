@@ -1,7 +1,7 @@
 {% extends 'blog/blog_base.html' %}
 {% block title %}New Hacker Story{% endblock %}
 {% block content %}
-    <a class="exit" href="{% url 'blog:welcome_hacker_view' %}" xmlns="http://www.w3.org/1999/html"><strong>Quit</strong></a>
+    <a class="exit" href="{% url 'blog:welcome_hacker_view' %}"><strong>Quit</strong></a>
     <section class="basic_layout">
         <div class="center_layout">
             <p>{{ error }}</p>

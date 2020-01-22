@@ -1,0 +1,21 @@
+{% extends 'blog/blog_base.html' %}
+{% block title %}Edit Hacker Story{% endblock %}
+{% block content %}
+    <a class="exit" href="{% url 'blog:welcome_hacker_view' %}"><strong>Quit</strong></a>
+    <section class="basic_layout">
+        <div class="center_layout">
+            <p>Hello, world!</p>
+{#            <p>{{ error }}</p>#}
+{#            <h1>Editor</h1>#}
+{#            <form class="inner_input" method="post" action="{% url 'blog:edit_hacker_story_view' %}">#}
+{#                {% csrf_token %}#}
+{#                {% for story in edit_story_form %}#}
+{#                    {{ story.label }}<br>#}
+{#                    {{ story }}<br>#}
+{#                {% endfor %}#}
+{#                <br><br>#}
+{#                <input class="button" type="submit" value="Save">#}
+{#            </form>#}
+        </div>
+    </section>
+{% endblock %}
