@@ -1,6 +1,6 @@
 from django.urls import path
 from .views.blog import welcome_hacker_view, user_login_view, user_sign_in_view, user_logout_view, \
-	new_hacker_story_view, edit_hacker_story_view
+	new_hacker_story_view, edit_hacker_story_view, show_hacker_stories_view
 
 app_name = 'blog'
 urlpatterns = [
@@ -10,4 +10,5 @@ urlpatterns = [
 	path('logout/', user_logout_view.user_logout_view, name='user_logout_view'),
 	path('story/new/', new_hacker_story_view.new_story_view, name='new_story_view'),
 	path('story/edit/', edit_hacker_story_view.edit_story_view, name='edit_hacker_story_view'),
+	path('show/stories', show_hacker_stories_view.show_hacker_stories_view, name='show_hacker_stories_view'),
 ]
