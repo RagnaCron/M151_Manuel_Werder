@@ -8,9 +8,11 @@
                 {% ifnotequal message '' %}
                     <p>{{ message }}</p>
                 {% endifnotequal %}<br><br>
-                <button class="button_link" href="">Create new Blog</button>
-                <button class="button_link" href="">Edit Blog</button>
-                <a class="button_link" href="{% url 'blog:new_story_view' %}">Read Blog</a>
+                <div>
+                    <a class="button_link" href="{% url 'blog:new_story_view' %}">Create new Blog</a>
+{#                    <a class="button_link" href="">Edit Blog</a>#}
+{#                    <a class="button_link" href="">Read Blog</a>#}
+                </div>
             {% else %}
                 {% ifequal message '' %}
                     <h1>Hello, Hacker! =)</h1>

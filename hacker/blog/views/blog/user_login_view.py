@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render
-from ...blog_login_form import BlogLoginForm
+from ...user_forms import BlogLoginForm
 
 
 def user_login_view(request):

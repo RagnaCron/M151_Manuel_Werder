@@ -1,7 +1,7 @@
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.shortcuts import render
-from ...user_sign_up_form import MyUserCreationForm
+from ...user_forms import MyUserCreationForm
 
 
 def user_sign_up_view(request):

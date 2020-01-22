@@ -40,3 +40,8 @@ class MyUserCreationForm(forms.Form):
 			self.cleaned_data['password1']
 		)
 		return user
+
+
+class BlogLoginForm(forms.Form):
+	username = forms.CharField(label='Enter Username', min_length=4, max_length=150)
+	password = forms.CharField(label='Enter Password', widget=forms.PasswordInput)
