@@ -1,3 +1,3 @@
 release: python manage.py makemigrations
 release: python manage.py migrate
-web: gunicorn hacker.wsgi --log-file -
+web: gunicorn hacker.hacker.wsgi --log-file -
