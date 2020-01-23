@@ -1,1 +1,1 @@
-web: gunicorn hacker/hacker.wsgi --log-file -
+web: gunicorn hacker.wsgi --log-file -
