@@ -11,7 +11,7 @@
                 </tr>
                 {% for story in stories %}
                     <tr>
-                        <td>date in need</td>
+                        <td>{{ story.creation_date }}</td>
                         <td>{{ story.story_title }}</td>
                         <td><a href="{% url 'blog:show_story_view' story_title=story.story_title %}">Read</a></td>
                     </tr>
