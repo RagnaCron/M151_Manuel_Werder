@@ -13,7 +13,7 @@
                     <tr>
                         <td>{{ story.creation_date }}</td>
                         <td>{{ story.story_title }}</td>
-                        <td><a href="{% url 'blog:show_story_view' story_title=story.story_title %}">Read</a></td>
+                        <td><a href="{% url 'blog:show_story_view' story_id=story.pk %}">Read</a></td>
                     </tr>
                 {% empty %}
                     <tr><td>No stories yet to read.</td></tr>
