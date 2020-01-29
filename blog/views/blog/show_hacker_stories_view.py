@@ -1,8 +1,18 @@
 from django.shortcuts import render
+from django.views.generic.list import ListView
 from ...editor_forms import HackerStory
+from ...models import StoryModel
+
+
+class HackerStoriesListView(ListView):
+	template_name = 'blog/show_hacker_stories.html'
+	model = StoryModel
+	context_object_name = 'stories'
+	paginate_by = 10
 
 
 def show_hacker_stories_view(request):
+
 	# if request.method == "POST":
 	# 	edit_story_form = HackerStory(request.POST)
 	# 	if edit_story_form.is_valid():

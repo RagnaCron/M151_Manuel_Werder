@@ -105,3 +105,8 @@ nav {
     margin-right: 20pt;
     align-self: flex-end;
 }
+
+ul {
+    list-style-type: none;
+    text-align: left;
+}
