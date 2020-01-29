@@ -4,13 +4,21 @@
     <a class="exit" href="{% url 'blog:welcome_hacker_view' %}"><strong>Quit</strong></a>
     <section class="basic_layout">
         <div class="center_layout">
-            <ul>
+            <table>
+                <tr>
+                    <th>Posting Date</th>
+                    <th>Title</th>
+                </tr>
                 {% for story in stories %}
-                    <li> date in need - {{ story.story_title }}</li>
+                    <tr>
+                        <td>date in need</td>
+                        <td>{{ story.story_title }}</td>
+                        <td><a href="{% url 'blog:show_story_view' story_title=story.story_title %}">Read</a></td>
+                    </tr>
                 {% empty %}
-                    <li>No stories yet to read.</li>
+                    <tr><td>No stories yet to read.</td></tr>
                 {% endfor %}
-            </ul>
+            </table>
         </div>
     </section>
 {% endblock %}

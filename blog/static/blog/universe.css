@@ -106,7 +106,7 @@ nav {
     align-self: flex-end;
 }
 
-ul {
-    list-style-type: none;
+th, td {
+    padding: 8px;
     text-align: left;
 }
