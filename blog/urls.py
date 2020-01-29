@@ -12,5 +12,4 @@ urlpatterns = [
 	path('story/edit/', edit_hacker_story_view.edit_story_view, name='edit_hacker_story_view'),
 	path('show/stories/', show_hacker_stories_view.show_hacker_stories_view, name='show_hacker_stories_view'),
 	path('show/stories/<str:story_title>', show_hacker_stories_view.show_story_view, name='show_story_view'),
-	# path('show/stories', show_hacker_stories_view.HackerStoriesListView.as_view(), name='show_hacker_stories_view'),
 ]
