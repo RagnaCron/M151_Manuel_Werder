@@ -9,8 +9,8 @@
                     <p>{{ message }}</p>
                 {% endifnotequal %}<br><br>
                 <div>
-                    <a class="button_link" href="{% url 'blog:new_story_view' %}">Create new Blog</a>
-                    <a class="button_link" href="{% url 'blog:edit_hacker_story_view' %}">Edit Blog</a>
+                    <a class="button_link" href="{% url 'blog:new_story_view' %}">Create new Blog</a><br>
+                    <a class="button_link" href="{% url 'blog:show_my_hacker_stories_view' %}">Edit Blog</a><br>
                     <a class="button_link" href="{% url 'blog:show_hacker_stories_view' %}">Read Blog</a>
                 </div>
             {% else %}

@@ -1,8 +1,16 @@
 from django.shortcuts import render
 from ...editor_forms import HackerStory
+from ...models import StoryModel
 
 
-def edit_story_view(request):
+def show_my_hacker_stories_view(request):
+	queryset = StoryModel.objects.filter(user_fk=request.user.pk)
+	print(queryset)
+	context = {'my_stories': queryset}
+	return render(request, 'blog/show_my_hacker_stories.html', context)
+
+
+def edit_my_hacker_story_view(request):
 	# if request.method == "POST":
 	# 	edit_story_form = HackerStory(request.POST)
 	# 	if edit_story_form.is_valid():
