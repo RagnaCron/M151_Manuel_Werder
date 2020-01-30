@@ -6,7 +6,7 @@
         <div class="center_layout">
             <p><strong>{{ error }}</strong></p>
             <h1>Editor</h1>
-            <form class="inner_input" method="post" action="{% url 'blog:edit_hacker_story_view' %}">
+            <form class="inner_input" method="post" action="{% url 'blog:edit_my_hacker_story_view' my_story_id=my_story_id %}">
                 {% csrf_token %}
                 {% for story in edit_story_form %}
                     {{ story.label }}<br>

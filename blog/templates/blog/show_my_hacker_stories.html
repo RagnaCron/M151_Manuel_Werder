@@ -13,7 +13,7 @@
                     <tr>
                         <td>{{ story.creation_date }}</td>
                         <td>{{ story.story_title }}</td>
-{#                        <td><a href="{% url 'blog:edit_my_hacker_story_view' story_id=story.pk %}">Edit</a></td>#}
+                        <td><a href="{% url 'blog:edit_my_hacker_story_view' my_story_id=story.pk %}">Edit</a></td>
                     </tr>
                 {% empty %}
                     <tr><td>No stories yet to edit.</td></tr>
