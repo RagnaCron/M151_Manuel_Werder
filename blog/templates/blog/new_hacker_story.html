@@ -3,7 +3,7 @@
 {% block content %}
     <a class="exit" href="{% url 'blog:welcome_hacker_view' %}"><strong>Quit</strong></a>
     <section class="basic_layout">
-        <div class="center_layout">
+        <div class="inner_layout">
             <p>{{ error }}</p>
             <h1>Editor</h1>
             <form class="inner_input" method="post" action="{% url 'blog:new_story_view' %}">

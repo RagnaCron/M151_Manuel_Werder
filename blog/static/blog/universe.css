@@ -82,6 +82,11 @@ nav {
     /*margin-bottom: 5px;*/
 }
 
+.story_content {
+    max-width: 80%;
+    margin: 5px;
+}
+
 .button {
     border-radius: 15px;
     font-family: 'Roboto Mono', monospace; /* Is needed for Submit button...*/

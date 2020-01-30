@@ -2,7 +2,7 @@ from django.shortcuts import render
 from ...models import StoryModel
 
 
-def show_hacker_stories_view(request):
+def show_all_hacker_stories_view(request):
 	queryset = StoryModel.objects.all()
 	context = {'stories': queryset}
 	return render(request, 'blog/show_hacker_stories.html', context)

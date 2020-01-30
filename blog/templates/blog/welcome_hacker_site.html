@@ -11,7 +11,7 @@
                 <div>
                     <a class="button_link" href="{% url 'blog:new_story_view' %}">Create new Blog</a><br>
                     <a class="button_link" href="{% url 'blog:show_my_hacker_stories_view' %}">Edit Blog</a><br>
-                    <a class="button_link" href="{% url 'blog:show_hacker_stories_view' %}">Read Blog</a>
+                    <a class="button_link" href="{% url 'blog:show_all_hacker_stories_view' %}">Read Blog</a>
                 </div>
             {% else %}
                 {% ifequal message '' %}

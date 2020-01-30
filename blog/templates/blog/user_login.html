@@ -5,7 +5,7 @@
 	<section class="basic_layout">
 		<div class="inner_layout">
 			<p>{{ error }}</p>
-			<h1>Cron Login</h1>
+			<h1>Login</h1>
 			<form class="inner_input" method="post" action="{% url 'blog:user_login_view' %}">
                 {% csrf_token %}
                 {% for login in user_login_form %}
