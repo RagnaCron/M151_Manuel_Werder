@@ -28,15 +28,6 @@ nav {
     color: #233446;
 }
 
-.round_corner_box {
-    align-content: center;
-    display: flex;
-    max-width: 100pt;
-    border-radius: 12px;
-    background-color: #B8C0CF;
-    color: #233446;
-}
-
 .basic_layout {
     flex: 1;
     display: flex;
@@ -46,6 +37,8 @@ nav {
 }
 
 .center_layout {
+    display: inherit;
+    flex-direction: column;
     text-align: center;
     align-items: center;
 }
@@ -83,8 +76,9 @@ nav {
 }
 
 .story_content {
-    max-width: 80%;
-    margin: 5px;
+    width: 50%;
+    word-wrap: normal;
+    overflow-wrap: normal;
 }
 
 .button {
