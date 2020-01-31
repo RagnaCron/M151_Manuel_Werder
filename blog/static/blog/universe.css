@@ -76,6 +76,10 @@ nav {
 }
 
 .story_content {
+    display: flex;
+    flex-direction: inherit;
+    align-self: center;
+    text-align: center;
     width: 50%;
     word-wrap: normal;
     overflow-wrap: normal;
