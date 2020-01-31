@@ -7,11 +7,13 @@
             <table>
                 <tr>
                     <th>Posting Date</th>
+                    <th>Username</th>
                     <th>Title</th>
                 </tr>
                 {% for story in stories %}
                     <tr>
                         <td>{{ story.creation_date }}</td>
+                        <td>{{ story.user_fk.username }}</td>
                         <td>{{ story.story_title }}</td>
                         <td><a href="{% url 'blog:show_story_view' story_id=story.pk %}">Read</a></td>
                     </tr>

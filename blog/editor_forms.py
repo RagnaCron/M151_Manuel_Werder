@@ -9,7 +9,7 @@ class HackerStory(forms.ModelForm):
 		fields = ('story_title', 'story_content')
 
 	story_title = forms.CharField(min_length=4, max_length=50)
-	story_content = forms.CharField(widget=FroalaEditor)
+	story_content = forms.CharField(widget=FroalaEditor, min_length=1)
 
 	def clean_story_title(self):
 		return self.cleaned_data.get('story_title')
